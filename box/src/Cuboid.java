@@ -4,7 +4,7 @@ public class Cuboid {
   int cSide;
 
   public int getSurface() {
-    return ((aSide*bSide)+(bSide*cSide)+(cSide+aSide)*2);
+    return ((aSide*bSide)+(bSide*cSide)+(cSide*aSide))*2;
   }
 
   public int getVolume() {
@@ -14,6 +14,6 @@ public class Cuboid {
   public Cuboid(int aSide, int bSide, int cSide) {
     this.aSide = aSide;
     this.bSide = bSide;
-    this.cSide = cSide
+    this.cSide = cSide;
   }
 }
