@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class CuboidTest {
@@ -20,5 +19,4 @@ public class CuboidTest {
   public void testGetVolume() {
     assertTrue(cuboid.getVolume() == 600);
   }
-
 }
