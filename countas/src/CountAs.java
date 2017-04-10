@@ -5,17 +5,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class CountAs {
-  public static void main(String[] args) {
-    readFile("afile.txt");
-    readFile("not-a-file.txt");
-    // Create a function that takes a filename as string parameter,
-    // counts the occurances of the letter "a", and returns it as a number.
-    // If the file does not exist, the function should return 0 and not break.
+  private String fileName;
 
-    // example: on the input "afile.txt" the function should return 28 - print this result
-    // example: on the input "not-a-file" the function should return 0 - print this result
-  }
-  public static void readFile(String fileName) {
+  public int getAsNumber() {
     Path path = Paths.get(fileName);
     int count = 0;
     try {
@@ -27,9 +19,13 @@ public class CountAs {
           }
         }
       }
-      System.out.println(count);
+      return count;
     } catch (IOException e) {
-      System.out.println("0");
+      return 0;
     }
+  }
+
+  public CountAs(String fileName) {
+    this.fileName = fileName;
   }
 }
