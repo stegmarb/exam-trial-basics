@@ -2,25 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Seconds {
-  public static void main(String[] args) {
-    List<Integer> numbers = new ArrayList<>();
-    listFiller(numbers);
-    System.out.println(numbers);
-    System.out.println(everySecond(numbers));
-  }
+  private List<Integer> intList = new ArrayList<>();
 
-  public static List<Integer> everySecond(List<Integer> list) {
+  public List<Integer> everySecond(){
     List<Integer> everySecond = new ArrayList<>();
-    for (int i = 1; i < list.size(); i+=2) {
-      everySecond.add(list.get(i));
+    for (int i = 1; i < intList.size(); i+=2) {
+      everySecond.add(intList.get(i));
     }
     return everySecond;
   }
 
-  public static List<Integer> listFiller(List<Integer> list) {
+  public List<Integer> listFiller() {
     for (int i = 0; i < 12; i++) {
-      list.add((int)(Math.random()*10));
+      intList.add((int)(Math.random()*10));
     }
-    return list;
+    return intList;
+  }
+
+  public List<Integer> getIntList() {
+    return intList;
   }
 }
